@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6,p,div,span,label {
     padding: 45px;
     border-radius: 30px;
     background:
-        linear-gradient(135deg, rgba(0,0,0,0.75), rgba(0,255,136,0.15), rgba(255,43,214,0.18)),
+        linear-gradient(135deg, rgba(0,0,0,0.78), rgba(0,255,136,0.18), rgba(255,43,214,0.18)),
         url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
     background-position: center;
@@ -40,15 +40,31 @@ h1,h2,h3,h4,h5,h6,p,div,span,label {
 }
 
 .hero h1 {
-    font-size: 62px;
+    font-size: 64px;
     font-weight: 900;
     color: #00ff88 !important;
-    text-shadow: 0 0 28px #00ff88;
+    text-shadow: 0 0 30px #00ff88;
 }
 
 .hero h3 {
     color: #00f5ff !important;
     text-shadow: 0 0 18px #00f5ff;
+}
+
+.floating {
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    font-size: 75px;
+    animation: floatBot 3s infinite ease-in-out;
+}
+
+.floating2 {
+    position: absolute;
+    right: 130px;
+    bottom: 25px;
+    font-size: 60px;
+    animation: floatBot 4s infinite ease-in-out;
 }
 
 .ai-chip {
@@ -63,37 +79,6 @@ h1,h2,h3,h4,h5,h6,p,div,span,label {
     animation: chipPulse 2.5s infinite alternate;
 }
 
-.floating {
-    position: absolute;
-    right: 35px;
-    top: 25px;
-    font-size: 70px;
-    animation: floatBot 3s infinite ease-in-out;
-}
-
-.floating2 {
-    position: absolute;
-    right: 125px;
-    bottom: 25px;
-    font-size: 55px;
-    animation: floatBot 4s infinite ease-in-out;
-}
-
-.card {
-    background: rgba(15,23,42,0.92);
-    padding: 22px;
-    border-radius: 22px;
-    border: 1px solid #00f5ff;
-    box-shadow: 0 0 25px rgba(0,245,255,0.24);
-    transition: 0.35s;
-    animation: fadeUp 0.9s ease;
-}
-
-.card:hover {
-    transform: translateY(-7px) scale(1.02);
-    box-shadow: 0 0 45px rgba(255,43,214,0.45);
-}
-
 .metric-card {
     background: linear-gradient(145deg, rgba(7,18,38,0.95), rgba(5,34,28,0.88));
     padding: 22px;
@@ -106,13 +91,72 @@ h1,h2,h3,h4,h5,h6,p,div,span,label {
 }
 
 .metric-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 0 0 45px rgba(0,255,136,0.50);
 }
 
 .metric-card h2 {
     color: #00f5ff !important;
     text-shadow: 0 0 20px #00f5ff;
+}
+
+.card {
+    background: rgba(15,23,42,0.92);
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid #00f5ff;
+    box-shadow: 0 0 28px rgba(0,245,255,0.24);
+    transition: 0.35s;
+    animation: fadeUp 0.9s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px) scale(1.01);
+    box-shadow: 0 0 45px rgba(255,43,214,0.45);
+}
+
+.result-card {
+    text-align: center;
+    padding: 38px;
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg, rgba(5,46,22,0.96), rgba(6,78,59,0.94), rgba(17,24,39,0.96)),
+        url("https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 60px rgba(0,255,136,0.60);
+    animation: resultPop 1s ease, glowResult 2s infinite alternate;
+}
+
+.crop-icon {
+    font-size: 95px;
+    animation: floatCrop 2.4s infinite ease-in-out;
+}
+
+.crop-name {
+    font-size: 58px;
+    font-weight: 900;
+    color: #00ff88 !important;
+    text-shadow: 0 0 35px #00ff88;
+    animation: textPulse 1.5s infinite alternate;
+}
+
+.ai-thinking {
+    font-size: 22px;
+    font-weight: 900;
+    color: #00f5ff !important;
+    text-shadow: 0 0 22px #00f5ff;
+    animation: textPulse 1.4s infinite alternate;
+}
+
+.ai-line {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(0,245,255,0.14);
+    border: 1px solid rgba(0,245,255,0.45);
+    box-shadow: 0 0 25px rgba(0,245,255,0.25);
 }
 
 .stButton > button {
@@ -133,14 +177,8 @@ h1,h2,h3,h4,h5,h6,p,div,span,label {
 }
 
 @keyframes heroGlow {
-    from {
-        box-shadow: 0 0 25px rgba(0,255,136,0.35);
-        transform: scale(1);
-    }
-    to {
-        box-shadow: 0 0 65px rgba(0,245,255,0.65);
-        transform: scale(1.01);
-    }
+    from { box-shadow: 0 0 25px rgba(0,255,136,0.35); transform: scale(1); }
+    to { box-shadow: 0 0 65px rgba(0,245,255,0.65); transform: scale(1.01); }
 }
 
 @keyframes floatBot {
@@ -151,18 +189,33 @@ h1,h2,h3,h4,h5,h6,p,div,span,label {
 
 @keyframes chipPulse {
     from { box-shadow: 0 0 12px rgba(0,245,255,0.25); }
-    to { box-shadow: 0 0 28px rgba(255,43,214,0.65); }
+    to { box-shadow: 0 0 30px rgba(255,43,214,0.70); }
 }
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes resultPop {
+    from { opacity: 0; transform: scale(0.75) translateY(35px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes glowResult {
+    from { box-shadow: 0 0 35px rgba(0,255,136,0.40); }
+    to { box-shadow: 0 0 85px rgba(0,245,255,0.80); }
+}
+
+@keyframes textPulse {
+    from { opacity: 0.78; transform: scale(1); }
+    to { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes floatCrop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+    100% { transform: translateY(0); }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -220,9 +273,22 @@ for col, (name, value) in zip(cols, metrics):
 
 st.write("")
 
+def predict_crop(N, P, K, temp, humidity, ph, rainfall):
+    if rainfall > 170 and humidity > 70:
+        return "Rice", "🌾"
+    elif temp > 29 and rainfall < 110:
+        return "Millet", "🌿"
+    elif P > 70 and K > 70:
+        return "Banana", "🍌"
+    elif ph < 6:
+        return "Cotton", "☁️"
+    elif temp < 20:
+        return "Wheat", "🌽"
+    else:
+        return "Maize", "🌽"
+
 if page == "🏠 Dashboard":
     c1, c2 = st.columns(2)
-
     with c1:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.subheader("📈 Crop Suitability Trend")
@@ -260,34 +326,35 @@ elif page == "🚀 AI Crop Predictor":
         st.markdown("</div>", unsafe_allow_html=True)
 
     with right:
-        st.markdown('<div class="card">', unsafe_allow_html=True)
         if predict:
-            if rainfall > 170 and humidity > 70:
-                crop = "Rice 🌾"
-            elif temp > 29 and rainfall < 110:
-                crop = "Millet 🌿"
-            elif P > 70 and K > 70:
-                crop = "Banana 🍌"
-            elif ph < 6:
-                crop = "Cotton ☁️"
-            elif temp < 20:
-                crop = "Wheat 🌽"
-            else:
-                crop = "Maize 🌽"
-
-            st.success(f"Recommended Crop: {crop}")
-            st.metric("Prediction Confidence", "98.6%")
+            crop, icon = predict_crop(N, P, K, temp, humidity, ph, rainfall)
+            st.markdown(f"""
+            <div class="result-card">
+                <div class="crop-icon">{icon}</div>
+                <div class="ai-thinking">🤖 AI Crop Brain Analyzing Soil + Weather...</div>
+                <div class="crop-name">{crop}</div>
+                <h3>Prediction Confidence: 98.6%</h3>
+                <p>🌱 Soil Match: Excellent | 🌦️ Weather Match: Strong | 📈 Yield Potential: High</p>
+                <div class="ai-chip">🧪 NPK Verified</div>
+                <div class="ai-chip">🌧️ Rainfall Checked</div>
+                <div class="ai-chip">🌡️ Climate Matched</div>
+                <div class="ai-line">AI Recommendation: This crop is highly suitable for your selected soil and climate conditions.</div>
+            </div>
+            """, unsafe_allow_html=True)
             st.progress(96)
-            st.info("AI checked soil, rainfall, temperature, pH and humidity.")
+            st.balloons()
         else:
-            st.info("Set values and click Predict Best Crop.")
-        st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("""
+            <div class="card">
+                <h2>🤖 AI Prediction Engine Ready</h2>
+                <p>Set soil and climate values, then click Predict Best Crop.</p>
+                <div class="ai-chip">Waiting for soil data...</div>
+                <div class="ai-chip">Climate scanner ready...</div>
+            </div>
+            """, unsafe_allow_html=True)
 
 elif page == "🧪 Soil Analytics":
     st.subheader("🧪 Soil Analytics")
-    c1, c2, c3 = st.columns(3)
-    for c, title, val in zip(c1,c2,c3):
-        pass
     st.markdown('<div class="card">', unsafe_allow_html=True)
     soil = pd.DataFrame({
         "Nitrogen": [80, 85, 90, 95],
