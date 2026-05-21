@@ -7,9 +7,11 @@ st.set_page_config(page_title="Crop AI Arena", page_icon="🌾", layout="wide")
 
 st.markdown("""
 <style>
-.stApp{
-    background-color:#061b12;
-    color:white;
+st.markdown("""
+<style>
+.stApp {
+    background: #061b12;
+    color: white;
 }
 </style>
 """, unsafe_allow_html=True)
