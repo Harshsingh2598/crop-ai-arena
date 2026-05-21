@@ -7,15 +7,12 @@ st.set_page_config(page_title="Crop AI Arena", page_icon="🌾", layout="wide")
 
 st.markdown("""
 <style>
-st.markdown("""
-<style>
 .stApp {
     background: #061b12;
     color: white;
 }
 </style>
 """, unsafe_allow_html=True)
-  background:
   radial-gradient(circle at 10% 10%, rgba(0,255,136,.18), transparent 28%),
   radial-gradient(circle at 85% 5%, rgba(176,38,255,.26), transparent 30%),
   radial-gradient(circle at 60% 85%, rgba(0,245,255,.15), transparent 34%),
